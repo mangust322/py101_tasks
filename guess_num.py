@@ -16,3 +16,20 @@
 
 if __name__ == '__main__':
     pass
+
+import random
+gues_num = random.randint(0, 1_000_000)
+num = None
+while num != gues_num:
+    try:
+        num = int(input('Введите число от 0 до 1 000 000\n'))
+    except ValueError:
+        print('\n\nIncorrect format')
+    else:
+        if num > 1_000_000 or num < 0:
+            print('\n\nOut of range')
+        elif gues_num > num:
+            print ('Больше')
+        elif gues_num < num:
+            print ('Меньше')
+print('Отлично, вы угадали число ', gues_num)

@@ -10,3 +10,15 @@
 
 if __name__ == '__main__':
     pass
+
+num = 0
+print(num)
+for num in range(1, 101):
+    if num % 15 == 0:
+        print('zip-zap')
+    elif num % 5 == 0:
+        print('zap')
+    elif num % 3 == 0:
+        print('zip')
+    else:
+        print(num)
